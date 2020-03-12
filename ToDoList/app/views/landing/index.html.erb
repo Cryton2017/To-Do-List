@@ -1,4 +1,17 @@
-<%= link_to "Sign Up", signup_path %> or 
-<%= link_to "Log In", login_path %>
-<h1>Example</h1>
-<p>Lorem ipsum …</p> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= stylesheet_link_tag "main.css" %>
+    </head>
+    <body>
+        <div class='header'>
+            <h2>Todo List</h2>
+        </div>
+        <div class='content'>
+            <div class='buttons'>
+                <%= button_to "Sign Up", signup_path, method: :post, :class => 'appBTNs' %>
+                <%= button_to "Log In", login_path, method: :post, :class => 'appBTNs' %>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @to_do.userID %>
+</p>
+
+<p>
+  <strong>Todoitem:</strong>
+  <%= @to_do.toDoItem %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @to_do.complete %>
+</p>
+
+<%= link_to 'Edit', edit_to_do_path(@to_do) %> |
+<%= link_to 'Back', dashboard_path %>

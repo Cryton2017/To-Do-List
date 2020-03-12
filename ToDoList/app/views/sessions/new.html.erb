@@ -32,7 +32,7 @@
               <%= password_field_tag :password, "", class: 'inputField' %>
             </div>
           </div>
-          <p id="alert"><%= alert %></p>
+          <p id="alert" class='LoginError'><%= alert %></p>
           <div class="actions">
             <%= submit_tag 'Login', :class => 'navBTN', :method => 'post'%>
           </div>

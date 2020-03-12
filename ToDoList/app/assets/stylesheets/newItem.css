@@ -4,9 +4,11 @@
     justify-content: center;
     align-items: center;
     width: 30%;
-    height: 35vh;
+    height: auto;
+    max-height: 70vh;
     background-color: rgb(63, 63, 63);
     color: white;
+    padding-bottom: 1%;
 }
 
 .NewItemForm{
@@ -15,4 +17,8 @@
     justify-content: center;
     align-items: center;
     width: 70%;
+}
+
+.createItemError{
+    color: rgb(216, 1, 1);
 }

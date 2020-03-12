@@ -16,3 +16,7 @@
     align-items: center;
     width: 70%;
 }
+
+.LoginError{
+    color: rgb(216, 1, 1);
+}

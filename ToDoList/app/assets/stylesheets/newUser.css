@@ -4,9 +4,11 @@
     align-items: center;
     justify-content: center;
     width: 30%;
-    height: 40vh;
+    height: auto;
+    max-height: 80vh;
     color: white;
     background-color: rgb(63, 63, 63);
+    padding-bottom: 1%;
 }
 
 .NewUserForm{
@@ -15,4 +17,9 @@
     justify-content: center;
     align-items: center;
     width: 70%;
+    height: auto;
+}
+
+.NewUserError{
+    color: rgb(216, 1, 1);
 }

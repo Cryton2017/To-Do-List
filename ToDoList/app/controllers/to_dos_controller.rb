@@ -34,7 +34,7 @@ class ToDosController < ApplicationController
         format.json { render :show, status: :created, location: @to_do }
       else
         format.html { render :new }
-        format.json { render json: @to_do.errors, status: :unprocessable_entity }
+        format.json { render json: @to_do.errors.full_messages = "Please provide a name!", status: :unprocessable_entity }
       end
     end
   end

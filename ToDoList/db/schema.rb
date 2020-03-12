@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2020_03_12_004029) do
     t.string "complete"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["userID"], name: "index_to_dos_on_userID", unique: true
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|

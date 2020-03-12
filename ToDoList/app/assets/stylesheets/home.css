@@ -1,6 +1,6 @@
 .appBTNs{
-    background-color: rgb(63, 63, 63);
-    border: 1px solid rgb(63, 63, 63);
+    background-color: rgb(148, 0, 0);
+    border: 1px solid rgb(148, 0, 0);
     color: white;
     width: 20vh;
     height: 10vh;
@@ -8,7 +8,7 @@
 }
 
 .appBTNs:hover{
-    background-color: white;
-    border: 1px solid rgb(63, 63, 63);
-    color: rgb(63, 63, 63);
+    background-color: rgb(85, 0, 0);
+    border: 1px solid rgb(85, 0, 0);
+    color: white;
 }

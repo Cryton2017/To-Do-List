@@ -6,13 +6,16 @@
     </head>
     <body>
         <div class='header'>
-            <h2>Todo List</h2>
+            <div class="left">
+                <h2>Todo List</h2>
+            </div>
+            <div class="right"></div>
         </div>
         <div class='content'>
             <div class='AccountCreate'>
                 <h3>New User</h3>
                 <%= render 'form', user: @user %>
-                <%= button_to 'Back', users_path, method: :get, :class => 'navBTN' %>
+                <%= button_to 'Back', root_path, method: :get, :class => 'navBTN' %>
             </div>
         </div>
     </body>

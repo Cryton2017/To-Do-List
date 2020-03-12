@@ -1,15 +1,44 @@
-<p id="alert"><%= alert %></p>
-<h1>Login</h1>
-<%= form_tag sessions_path do |form| %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions">
-    <%= submit_tag "Login" %>
-  </div>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "main.css" %>
+    <%= stylesheet_link_tag "login.css" %>
+  </head>
+  <body>
+    <div class='header'>
+      <div class="left">
+        <h2>Todo List</h2>
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class='content'>
+      <div class='loginCont'>
+        <h1>Login</h1>
+        <%= form_tag(sessions_path, {:class => 'loginForm'}) do |form| %>
+        
+          <div class="field">
+            <div class="fieldItem">
+              <%= label_tag :email, 'Email Address:' %>
+            </div>
+            <div class="fieldItem">
+              <%= text_field_tag :email, "", class: 'inputField' %>
+            </div>
+          </div>
+          <div class="field">
+            <div class="fieldItem">
+              <%= label_tag :password, 'Password:' %>
+            </div>
+            <div class="fieldItem">
+              <%= password_field_tag :password, "", class: 'inputField' %>
+            </div>
+          </div>
+          <p id="alert"><%= alert %></p>
+          <div class="actions">
+            <%= submit_tag 'Login', :class => 'navBTN', :method => 'post'%>
+          </div>
+        <% end %>
+        <%= button_to 'Back to Home', root_path, :class => 'navBTN',:method => 'get' %>
+      </div>
+    </div>
+  </body>
+</html>

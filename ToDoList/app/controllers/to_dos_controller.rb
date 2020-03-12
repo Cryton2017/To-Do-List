@@ -27,6 +27,7 @@ class ToDosController < ApplicationController
     @to_do = ToDo.new(to_do_params)
 
     respond_to do |format|
+      @to_do.userID = session[:user_id]
       if @to_do.save
         format.html { redirect_to @to_do, notice: 'To do was successfully created.' }
         format.json { render :show, status: :created, location: @to_do }
@@ -70,6 +71,6 @@ class ToDosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def to_do_params
-      params.require(:to_do).permit(:userID, :toDoItem, :complete)
+      params.require(:to_do).permit(:toDoItem, :complete)
     end
 end

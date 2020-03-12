@@ -1,0 +1,18 @@
+body{
+    color: white;
+}
+
+.appBTNs{
+    background-color: rgb(63, 63, 63);
+    border: 1px solid rgb(63, 63, 63);
+    color: white;
+    width: 30vh;
+    height: 15vh;
+    font-size: xx-large;
+}
+
+.appBTNs:hover{
+    background-color: white;
+    border: 1px solid rgb(63, 63, 63);
+    color: rgb(63, 63, 63);
+}

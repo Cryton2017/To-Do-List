@@ -36,17 +36,9 @@ body{
     width: 40%;
 }
 
-.appBTNs{
+.inputField{
     background-color: rgb(63, 63, 63);
-    border: 1px solid rgb(63, 63, 63);
+    border: none;
     color: white;
-    width: 20vh;
-    height: 10vh;
-    font-size: xx-large;
-}
-
-.appBTNs:hover{
-    background-color: white;
-    border: 1px solid rgb(63, 63, 63);
-    color: rgb(63, 63, 63);
+    border-bottom: 1px solid white !important;
 }

@@ -1,5 +1,19 @@
-<h1>New User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Back', users_path %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= stylesheet_link_tag "main.css" %>
+        <%= stylesheet_link_tag "newUser.css" %>
+    </head>
+    <body>
+        <div class='header'>
+            <h2>Todo List</h2>
+        </div>
+        <div class='content'>
+            <div class='AccountCreate'>
+                <h3>New User</h3>
+                <%= render 'form', user: @user %>
+                <%= button_to 'Back', users_path, method: :get, :class => 'navBTN' %>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+.updateItemCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 35vh;
+    background-color: rgb(63, 63, 63);
+    color: white;
+}
+
+.UpdateItemForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}

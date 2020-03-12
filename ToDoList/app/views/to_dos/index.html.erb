@@ -3,6 +3,7 @@
   <head>
     <%= stylesheet_link_tag "main.css" %>
     <%= stylesheet_link_tag "dashboard.css" %>
+    <%= stylesheet_link_tag "home.css" %>
   </head>
   <body>
     <% if current_user %>
@@ -32,7 +33,13 @@
               <% @to_dos.each do |to_do| %>
                 <tr>
                   <td class="tableItem"><%= to_do.toDoItem %></td>
-                  <td class="tableItem"><%= to_do.complete %></td>
+                  <td class="tableItem">
+                    <% if to_do.complete == '1' %>
+                      Yes
+                    <% else %>
+                      No
+                    <% end %>
+                  </td>
                   <td class="tableItem"><%= button_to 'Edit', edit_to_do_path(to_do), method: :get, :class => "listBTN" %></td>
                   <td class="tableItem"><%= button_to 'Delete', to_do, method: :delete, :class => "listBTN", data: { confirm: 'Are you sure?' } %></td>
                 </tr>
@@ -44,12 +51,20 @@
 
           <%= button_to 'New Item', newItem_path, method: :get, :class =>"navBTN" %>
         </div>
-
-        <p id="notice"><%= notice %></p>
       </div>
     <% else %>
-      <%= link_to "Sign Up", signup_path %> or 
-      <%= link_to "Log In", login_path %>  
+      <div class='header'>
+        <div class="left">
+          <h2>Todo List</h2>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class='content'>
+        <div class='buttons'>
+          <%= button_to "Sign Up", signup_path, method: :get, :class => 'appBTNs' %>
+          <%= button_to "Log In", login_path, method: :get, :class => 'appBTNs' %>
+        </div>
+      </div>
     <% end %>
   </body>
 </html>

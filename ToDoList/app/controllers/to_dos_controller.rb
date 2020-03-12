@@ -43,8 +43,8 @@ class ToDosController < ApplicationController
   # PATCH/PUT /to_dos/1.json
   def update
     respond_to do |format|
-      if @to_do.update(to_do_params)
-        format.html { redirect_to @to_do, notice: 'To do was successfully updated.' }
+      if @to_do.update(to_do_update_params)
+        format.html { redirect_to dashboard_path}
         format.json { render :show, status: :ok, location: @to_do }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class ToDosController < ApplicationController
   def destroy
     @to_do.destroy
     respond_to do |format|
-      format.html { redirect_to to_dos_url, notice: 'To do was successfully destroyed.' }
+      format.html { redirect_to dashboard_path}
       format.json { head :no_content }
     end
   end
@@ -73,5 +73,10 @@ class ToDosController < ApplicationController
     # Only allow a list of trusted parameters through.
     def to_do_params
       params.require(:to_do).permit(:toDoItem)
+    end
+
+    # Only allow a list of trusted parameters through.
+    def to_do_update_params
+      params.require(:to_do).permit(:toDoItem, :complete)
     end
 end

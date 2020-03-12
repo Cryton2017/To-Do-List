@@ -1,0 +1,36 @@
+<%= form_with(model: to_do, local: true, class: 'UpdateItemForm') do |form| %>
+
+  <% if to_do.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(to_do.errors.count, "error") %> prohibited this to_do from being saved:</h2>
+
+      <ul>
+        <% to_do.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="fieldItem">
+      <%= form.label :toDoItem, 'Item Name:' %>
+    </div>
+    <div class="fieldItem">
+      <%= form.text_field :toDoItem, class: 'inputField' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="fieldItem">
+      <%= form.label :toDoItem, 'Item Name:' %>
+    </div>
+    <div class="fieldItem">
+      <%= form.check_box :complete, class: 'inputCheck' %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Update Item', :class => 'navBTN', :method => 'post'  %>
+  </div>
+<% end %>

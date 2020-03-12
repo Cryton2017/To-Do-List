@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Todo List - Homepage</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <h1>Dashboard Page</h1>
-    </body>
-</html>
+ <% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to "Log Out", logout_path %>
+<% else %>
+  <%= link_to "Sign Up", signup_path %> or 
+  <%= link_to "Log In", login_path %>
+<% end %>
+<p id="notice"><%= notice %></p>
+<h1>Example</h1>
+<p>Lorem ipsum …</p> 

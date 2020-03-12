@@ -46,13 +46,10 @@
         </div>
 
         <p id="notice"><%= notice %></p>
-
-        
-
-      <% else %>
-        <%= link_to "Sign Up", signup_path %> or 
-        <%= link_to "Log In", login_path %>
       </div>
+    <% else %>
+      <%= link_to "Sign Up", signup_path %> or 
+      <%= link_to "Log In", login_path %>  
     <% end %>
   </body>
 </html>

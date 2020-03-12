@@ -1,4 +1,5 @@
-<%= form_with(model: to_do, local: true) do |form| %>
+<%= form_with(model: to_do, local: true, class: 'NewItemForm') do |form| %>
+
   <% if to_do.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(to_do.errors.count, "error") %> prohibited this to_do from being saved:</h2>
@@ -12,16 +13,15 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :toDoItem %>
-    <%= form.text_field :toDoItem %>
-  </div>
-
-  <div class="field">
-    <%= form.label :complete %>
-    <%= form.text_field :complete %>
+    <div class="fieldItem">
+      <%= form.label :toDoItem, 'Item Name:' %>
+    </div>
+    <div class="fieldItem">
+      <%= form.text_field :toDoItem, class: 'inputField' %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit  %>
+    <%= form.submit 'Create Item', :class => 'navBTN', :method => 'post'  %>
   </div>
 <% end %>

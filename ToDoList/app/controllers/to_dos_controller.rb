@@ -28,8 +28,9 @@ class ToDosController < ApplicationController
 
     respond_to do |format|
       @to_do.userID = session[:user_id]
+      @to_do.complete = 'No'
       if @to_do.save
-        format.html { redirect_to @to_do, notice: 'To do was successfully created.' }
+        format.html { redirect_to dashboard_path}
         format.json { render :show, status: :created, location: @to_do }
       else
         format.html { render :new }
@@ -38,7 +39,7 @@ class ToDosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /to_dos/1
+  # PATCH/PUT /to_dos/1 
   # PATCH/PUT /to_dos/1.json
   def update
     respond_to do |format|
@@ -71,6 +72,6 @@ class ToDosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def to_do_params
-      params.require(:to_do).permit(:toDoItem, :complete)
+      params.require(:to_do).permit(:toDoItem)
     end
 end

@@ -23,3 +23,24 @@
 .NewUserError{
     color: rgb(216, 1, 1);
 }
+
+/* Mobile Styles */
+@media(max-width: 767px) {
+    .AccountCreate{
+        width: 90%;
+    }
+
+    .NewUserForm{
+        width: 90%;
+    }
+}
+  
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+  
+/* Desktop Styles */
+@media (min-width: 993px) {
+
+}

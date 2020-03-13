@@ -21,6 +21,7 @@
     min-height: 20vh;
     max-height: 70vh;
     padding: 1%;
+    overflow: scroll;
 }
 
 .toDoTable{
@@ -46,4 +47,25 @@
     background-color: rgb(85, 0, 0);
     border: 1px solid rgb(85, 0, 0);
     color: white;
+}
+
+/* Mobile Styles */
+@media(max-width: 767px) {
+    .toDoListCont{
+        width: 90%;
+    }
+
+    .toDoTable{
+        width: 100%;
+    }
+}
+  
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+  
+/* Desktop Styles */
+@media (min-width: 993px) {
+
 }

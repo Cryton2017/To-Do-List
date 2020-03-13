@@ -16,3 +16,24 @@
     align-items: center;
     width: 70%;
 }
+
+/* Mobile Styles */
+@media(max-width: 767px) {
+    .updateItemCont{
+        width: 90%;
+    }
+    
+    .UpdateItemForm{
+        width: 80%;
+    }
+}
+  
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+  
+/* Desktop Styles */
+@media (min-width: 993px) {
+
+}

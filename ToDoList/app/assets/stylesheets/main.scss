@@ -1,8 +1,9 @@
 body{
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
     background-image: image-url('background.png');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     margin: 0 !important;
 }
@@ -94,4 +95,75 @@ body{
     background-color: rgb(85, 0, 0);
     border: 1px solid rgb(85, 0, 0);
     color: white;
+}
+
+/* Mobile Styles */
+@media(max-width: 767px) {
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5vh;
+        margin-top: 1%;
+    }
+    
+    .right{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 90%;
+        height: 5vh;
+    }
+
+    .content{
+        height: 90vh;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 40%;
+        height: 40vh;
+    }
+
+    .inputField{
+        width: 100%;
+    }
+
+    .field{
+        width: 80%;
+    }
+
+    .fieldItem{
+        width: 50%;
+    }
+
+    .navBTN{
+        width: 25vh;
+    }
+
+}
+  
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+  
+/* Desktop Styles */
+@media (min-width: 993px) {
+
 }

@@ -22,3 +22,24 @@
 .createItemError{
     color: rgb(216, 1, 1);
 }
+
+/* Mobile Styles */
+@media(max-width: 767px) {
+    .newItemCont{
+        width: 90%;
+    }
+
+    .NewItemForm{
+        width: 80%;
+    }
+}
+  
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+  
+/* Desktop Styles */
+@media (min-width: 993px) {
+
+}
